@@ -2,7 +2,8 @@ FROM python:slim
 
 RUN pip install --upgrade --no-cache-dir awsebcli
 
-WORKDIR /root/testgu
+RUN apt-get update
+RUN apt-get install git -y
 
 ADD entrypoint.sh /usr/bin/entrypoint
 
