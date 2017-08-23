@@ -2,10 +2,10 @@ FROM python:slim
 
 RUN pip install --upgrade --no-cache-dir awsebcli
 
-WORKDIR /root
+WORKDIR /root/test
 
-ADD entrypoint.sh /root/entrypoint.sh
+ADD entrypoint.sh /usr/bin/entrypoint
 
-RUN chmod +x /root/entrypoint.sh
+RUN chmod +x /usr/bin/entrypoint
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["entrypoint"]

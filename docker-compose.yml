@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+    test:
+        environment:
+          - "AWS_ACCESS_KEY_ID=AKIAJ2JQZULL5OYVR6YA"
+          - "AWS_SECRET_ACCESS_KEY=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"
+        build: ./
+        volumes:
+          - ./test:/root/test
+        command: "eb status horasis-test"
