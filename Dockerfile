@@ -8,6 +8,4 @@ ADD entrypoint.sh /root/entrypoint.sh
 
 RUN chmod +x /root/entrypoint.sh
 
-RUN ln -s /bin/bash /usr/local/bin/bash
-
 ENTRYPOINT ["./entrypoint.sh"]
