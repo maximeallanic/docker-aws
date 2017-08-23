@@ -2,7 +2,7 @@ FROM python:slim
 
 RUN pip install --upgrade --no-cache-dir awsebcli
 
-WORKDIR /root/test
+WORKDIR /root/testgu
 
 ADD entrypoint.sh /usr/bin/entrypoint
 
