@@ -1,7 +1,7 @@
 FROM python:slim
 
 RUN apt-get update
-RUN apt-get install git curl -y
+RUN apt-get install git curl docker -y
 
 # AWS EB
 RUN pip install --upgrade --no-cache-dir awsebcli awscli
