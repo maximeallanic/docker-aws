@@ -1,5 +1,6 @@
 FROM docker:latest
 
+# Install PIP
 RUN apk update
 RUN apk add git curl py-pip
 
