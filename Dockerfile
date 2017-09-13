@@ -1,7 +1,7 @@
-FROM python:slim
+FROM docker:latest
 
-RUN apt-get update
-RUN apt-get install git curl docker -y
+RUN apk update
+RUN apk add git curl py-pip
 
 # AWS EB
 RUN pip install --upgrade --no-cache-dir awsebcli awscli
