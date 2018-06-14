@@ -2,7 +2,7 @@ FROM docker:latest
 
 # Install PIP
 RUN apk update
-RUN apk add git curl py-pip
+RUN apk add git curl py-pip postgresql-client
 
 # AWS EB
 RUN pip install --upgrade --no-cache-dir awsebcli awscli
