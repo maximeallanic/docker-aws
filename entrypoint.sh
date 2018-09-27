@@ -7,8 +7,10 @@ fi
 
 ## AWS EB
 mkdir -p ~/.aws/
-printf "[eb-cli]\naws_access_key_id = %s\naws_secret_access_key = %s\n" ${AWS_KEY} ${AWS_SECRET} > ~/.aws/credentials
-printf "[profile eb-cli]\nregion=eu-west-1\noutput=json" > ~/.aws/config
+printf "[default]\naws_access_key_id = %s\naws_secret_access_key = %s\n" ${AWS_KEY} ${AWS_SECRET} > ~/.aws/credentials
+printf "[eb-cli]\naws_access_key_id = %s\naws_secret_access_key = %s\n" ${AWS_KEY} ${AWS_SECRET} >> ~/.aws/credentials
+printf "[default]\nregion=eu-west-1\noutput=json" > ~/.aws/config
+printf "[profile eb-cli]\nregion=eu-west-1\noutput=json" >> ~/.aws/config
 
 ## AWS ECS
 if [ ! -z "${AWS_ECS_CLUSTER}" ]
